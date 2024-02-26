@@ -1,0 +1,56 @@
+.center {
+  margin: auto;
+  width: 80%;
+}
+th,
+td {
+  text-align-last: center;
+  vertical-align: middle;
+  padding: 1%;
+  font-size: 20px;
+  border: 10px;
+}
+.component {
+  background-color: skyblue;
+  border: 3px solid black;
+  border-radius: 9px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.body-component {
+  background-color: steelblue;
+  border: 3px solid black;
+  border-radius: 9px;
+  margin: 20px;
+  padding: 20px;
+}
+.body-component-function {
+  background-color: turquoise;
+  border: 3px solid black;
+  border-radius: 9px;
+  margin: 20px;
+  padding: 20px;
+}
+.width {
+  width: 80%;
+  margin: auto;
+}
+body {
+  background-color: greenyellow;
+}
+.component:not(:hover) {
+  background-color: white;
+}
+
+.body-component-function:not(:hover) {
+  background-color: white;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+button {
+  background-color: black;
+  color: white;
+}
