@@ -1,4 +1,4 @@
-.center {
+/* .center {
   margin: auto;
   width: 80%;
 }
@@ -53,4 +53,8 @@ thead {
 button {
   background-color: black;
   color: white;
+} */
+.table-width {
+  width: 60%;
+  margin: auto;
 }

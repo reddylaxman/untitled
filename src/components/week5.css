@@ -1,0 +1,12 @@
+.center {
+  margin: auto;
+}
+.card {
+  box-shadow: 10px 0px 10px blue;
+  border-radius: 25px;
+  transition: all 0.1246s;
+}
+.card:not(:hover) {
+  box-shadow: none;
+  border-radius: 0%;
+}

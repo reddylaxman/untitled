@@ -2,12 +2,16 @@
   margin: auto;
   width: 80%;
 }
+.table-width {
+  width: 50%;
+  margin: auto;
+}
 th,
 td {
   text-align-last: center;
   vertical-align: middle;
   padding: 0%;
-  font-size: 20px;
+  font-size: 16px;
 }
 .component {
   background-color: lightbluenpm;
@@ -28,9 +32,9 @@ td {
   width: 80%;
   margin: auto;
 }
-body {
+/* body {
   background-color: beige;
-}
+} */
 .component:not(:hover) {
   background-color: white;
 }

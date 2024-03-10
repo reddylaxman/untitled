@@ -1,12 +1,11 @@
 import "./App.css";
-import Week4 from "./components/week4";
+import ReactRouting from "./mern";
 
 function App() {
   return (
     <div className="App">
-      <Week4 />
+      <ReactRouting />
     </div>
   );
 }
-
 export default App;

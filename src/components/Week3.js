@@ -4,40 +4,43 @@ import "./week3.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 function PropsComponentWithOneAttribute(props) {
   return (
-    <div className="component width ">
-      <h2 style={{ textDecorationLine: "underline" }}>
+    // className="component width "
+    <div>
+      <h4 style={{ textDecorationLine: "underline" }}>
         Rendering a single attribute to props
-      </h2>
-      <h2 style={{ color: "blue" }}>
+      </h4>
+      <h4 style={{ color: "blue" }}>
         My Favorite Colour is{" "}
         <span style={{ color: "black" }}>{props.color}</span>
-      </h2>
+      </h4>
     </div>
   );
 }
 function PropsComponentWithMultiAttribute(props) {
   return (
-    <div className="component width">
-      <h2 style={{ textDecorationLine: "underline" }}>
+    // className="component width"
+    <div>
+      <h4 style={{ textDecorationLine: "underline" }}>
         Rendering multiple attribute to props
-      </h2>
-      <h2 style={{ color: "darkblue" }}>
+      </h4>
+      <h4 style={{ color: "darkblue" }}>
         I am <span style={{ color: "red" }}>{props.name}</span>
-      </h2>
-      <h2 style={{ color: "green" }}>
+      </h4>
+      <h4 style={{ color: "green" }}>
         My Roll Number is{" "}
         <span style={{ color: "orangered" }}>{props.rno}</span>
-      </h2>
+      </h4>
     </div>
   );
 }
 function StudentDetails(props) {
   const student = props.student;
   return (
-    <div className="component width">
-      <h2 style={{ textDecorationLine: "underline" }}>
+    // className="component width"
+    <div className="table-width">
+      <h3 style={{ textDecorationLine: "underline" }}>
         Student Details using Props{" "}
-      </h2>
+      </h3>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -62,10 +65,11 @@ function StudentDetails(props) {
 function EmpDetails(props) {
   const employee = props.employee;
   return (
-    <div className="component width">
-      <h2 style={{ textDecorationLine: "underline" }}>
+    // className="component width"
+    <div className="table-width">
+      <h3 style={{ textDecorationLine: "underline" }}>
         Employee Details using Props{" "}
-      </h2>
+      </h3>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -90,10 +94,11 @@ function EmpDetails(props) {
 function StudentDetailsObjectDestruction(props) {
   const student = props.student;
   return (
-    <div className="component width">
-      <h2 style={{ textDecorationLine: "underline" }}>
+    // className="component width"
+    <div className="table-width">
+      <h3 style={{ textDecorationLine: "underline" }}>
         Student details using Object Destruction{" "}
-      </h2>
+      </h3>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -163,13 +168,9 @@ function Week3() {
     },
   ];
   return (
-    <div className="body-component">
-      <h1>Week 3 - Create React App and Demonstrate Props</h1>
-      <hr />
-      <h3>
-        QNO.1. Create a React Component, using props render one & multiple
-        attribute values and display it on the webpage.
-      </h3>
+    // className="body-component"
+    <div>
+      <h4>Displaying one & multiple attribute using props</h4>
       <PropsComponentWithOneAttribute color="Black" />
       <br />
       <PropsComponentWithMultiAttribute
@@ -177,22 +178,19 @@ function Week3() {
         rno="2211cs010133"
       />
       <hr />
-      <h3>
-        QNo.2. Create a React Component, using props through functions display
-        student details (Std-id, Std-Name, Std-Email) on the webpage.
-      </h3>
+      <h4>Displaying student details using props</h4>
       <StudentDetails student={student} />
       <hr />
-      <h3>
-        QNO.3. Create a React Component, using props through classes display
-        employee details (Emp-id, Emp-Name, Emp-Designation) on the webpage.
-      </h3>
+      <h4>
+        Displaying using props through classes display employee details (Emp-id,
+        Emp-Name, Emp-Designation) on the webpage.
+      </h4>
       <EmpDetails employee={emp} />
       <hr />
-      <h3>
-        QNO.4. Create a Student component and able to display Student details
-        which vary in htno, name, mailid, and mobileno to users.
-      </h3>
+      <h4>
+        Displaying Student details which vary in htno, name, mailid, and
+        mobileno to users.
+      </h4>
       <StudentDetailsObjectDestruction student={studentObj} />
     </div>
   );

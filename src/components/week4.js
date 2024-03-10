@@ -3,29 +3,34 @@ import "./week4.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Table from "react-bootstrap/Table";
 function UseStateExample() {
+  const name = null;
+  const rno = null;
   const [details, setDetails] = useState(
     <div>
-      <h3>Name: No name</h3>
-      <h3>Roll No: Not registered</h3>
+      <h5>Name: {name}</h5>
+      <h5>Roll No: {rno}</h5>
     </div>
   );
   const getDetails = () => {
+    const name = "Laxman Reddy";
+    const rno = "2211cs010133";
     setDetails(
       <div>
-        <h3>Name: Laxman Reddy</h3>
-        <h3>Roll No: 2211cs010133</h3>
+        <h5>Name: {name}</h5>
+        <h5>Roll No: {rno}</h5>
       </div>
     );
   };
   return (
-    <div className="component width">
-      <h2>
-        1. Create a React Component, Display initial State of Student
-        Hall-ticket and Name and change its State by using useState().
-      </h2>
-      <h2 style={{ textDecorationLine: "underline" }}>Use State Example</h2>
-      <div className="body-component-function">
-        <h3>{details}</h3>
+    // className="component width"
+    // className="body-component-function"
+    <div>
+      <h4 style={{ textDecorationLine: "underline" }}>
+        Displaying Use State Example
+      </h4>
+
+      <div>
+        <h4>{details}</h4>
 
         <button onClick={getDetails}>Click to get Details</button>
       </div>
@@ -33,50 +38,45 @@ function UseStateExample() {
   );
 }
 function UseEffectExample() {
+  const headings = ["SNO", "Name of the student", "Roll No", "Email ID"];
   const [Details, setDetails] = useState([]);
   useEffect(() => {
-    fetch("https://sindhuravuri666.github.io/StudentList/StudentList.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setDetails(data);
-      });
-  }, []);
-  return (
-    <div className="component width">
-      <h2>
-        2. Create a React Component, Display student Hall-ticket, Name and
-        Email-Id using useEffect() fetch student info from student.json.
-      </h2>
+    const fetchStudentDetails = async () => {
+      const response = await fetch(
+        "https://sindhuravuri666.github.io/StudentList/StudentList.json"
+      );
 
-      <h3 style={{ color: "blue" }}>
-        student.json url is
-        <span style={{ color: "magenta" }}>
-          {" "}
-          <a
-            href="https://sindhuravuri666.github.io/StudentList/StudentList.json"
-            style={{ color: "red" }}
-          >
-            https://sindhuravuri666.github.io/StudentList/StudentList.json
-          </a>
-          <h3>click the above link to open student.json data</h3>
-        </span>
-      </h3>
-      <h2 style={{ textDecorationLine: "underline" }}>
-        Use effect example by fetching data from student.json
-      </h2>
-      <div className="body-component-function">
+      const data = await response.json();
+
+      console.log(data);
+
+      setDetails(data);
+    };
+
+    fetchStudentDetails();
+  }, []);
+
+  return (
+    // className="component width"
+    // className="body-component-function"
+    <div>
+      <h4 style={{ textDecorationLine: "underline" }}>
+        Displaying Use effect example by fetching data from student.json
+      </h4>
+
+      <div className="table-width">
         <Table striped bordered hover variant="danger">
           <thead>
-            <th>Name of the Student</th>
-            <th>Roll No</th>
-            <th>Email Id</th>
+            <tr>
+              {headings.map((h, index) => (
+                <th key={h}>{h}</th>
+              ))}
+            </tr>
           </thead>
           <tbody>
-            {Details.map((student) => (
+            {Details.slice(0, 5).map((student, index) => (
               <tr>
+                <td>{index + 1}</td>
                 <td>{student.Name}</td>
                 <td>{student.RollNo}</td>
                 <td>{student.EmailID}</td>
@@ -90,13 +90,11 @@ function UseEffectExample() {
 }
 function Week4() {
   return (
-    <div className="body-component">
-      <h2>
-        Week 4 - Create React App and Implement API Calls using React Hooks
-      </h2>
-      <hr />
+    // className="body-component"
+    <div>
       <UseStateExample />
       <br />
+      <hr />
       <UseEffectExample />
     </div>
   );

@@ -7,5 +7,9 @@ th,
 td {
   text-align-last: center;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 14px;
+}
+.table-width {
+  width: 40%;
+  margin: auto;
 }
