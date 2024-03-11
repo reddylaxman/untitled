@@ -93,8 +93,7 @@ const UseEffectExample1 = () => {
 
   useEffect(() => {
     //console.log(count);
-
-    console.log("inside use Effect");
+    console.log('"constraint-1"');
   });
 
   return (
@@ -115,14 +114,35 @@ const UseEffectExample2 = () => {
 
   useEffect(() => {
     //console.log(count);
-
-    console.log("inside use Effect");
+    console.log('"constraint-2"');
   }, []);
 
   return (
     <div>
       <h4 style={{ textDecorationLine: "underline" }}>
         Displaying Use effect example using empty dependency
+      </h4>
+      <p>
+        you clicked {count} times{console.log("Inside Component....")}{" "}
+      </p>
+
+      <button onClick={() => setcount(count + 1)}>increment</button>
+    </div>
+  );
+};
+const UseEffectExample3 = () => {
+  const [count, setcount] = useState(0);
+
+  useEffect(() => {
+    //console.log(count);
+
+    console.log('"constraint-3"');
+  }, [count]);
+
+  return (
+    <div>
+      <h4 style={{ textDecorationLine: "underline" }}>
+        Displaying useEffect triggers based on state variable or props
       </h4>
       <p>
         you clicked {count} times{console.log("Inside Component....")}{" "}
@@ -142,6 +162,8 @@ function Week4() {
       <UseEffectExample1 />
       <hr />
       <UseEffectExample2 />
+      <hr />
+      <UseEffectExample3 />
       <hr />
       <UseEffectExample />
     </div>
