@@ -10,11 +10,11 @@ const Week6 = () => {
     return (
       // className="body-component"
       <div>
-        <h4 style={{ color: "peru" }}>
+        <h2 style={{ color: "black" }}>
           Displaying Ternary Operators component
-        </h4>
-        <h5 style={{ color: "red" }}>Please, Login </h5>
-        <h5 style={{ color: "blue" }}>This is Login Component</h5>
+        </h2>
+        <h3 style={{ color: "red" }}>Please, Login </h3>
+        <h3 style={{ color: "blue" }}>This is Login Component</h3>
         <button onClick={handleLogin}>Login</button>
       </div>
     );
@@ -23,11 +23,11 @@ const Week6 = () => {
     return (
       // className="body-component"
       <div>
-        <h4 style={{ color: "peru" }}>
+        <h2 style={{ color: "black" }}>
           Displaying Ternary Operators component
-        </h4>
-        <h5 style={{ color: "tomato" }}>Welcome back </h5>
-        <h5 style={{ color: "teal" }}>This is Welcome Component</h5>
+        </h2>
+        <h3 style={{ color: "tomato" }}>Welcome back </h3>
+        <h3 style={{ color: "teal" }}>This is Welcome Component</h3>
         <button onClick={handleLogin}>Logout</button>
       </div>
     );
@@ -36,10 +36,10 @@ const Week6 = () => {
     const WelcomeComponent = () => {
       return (
         <div>
-          <h4 style={{ color: "magenta" }}>
+          <h3 style={{ color: "magenta" }}>
             You are successfully logged in{" "}
-            <span style={{ color: "blue" }}>Laxman Reddy</span>
-          </h4>
+            <span style={{ color: "blue" }}>Laxman Reddy</span>{" "}
+          </h3>
         </div>
       );
     };
@@ -53,11 +53,11 @@ const Week6 = () => {
       return (
         // className="body-component"
         <div>
-          <h4 style={{ color: "peru" }}>
+          <h2 style={{ color: "black" }}>
             Displaying IF- ElSE Condition component
-          </h4>
-          <h5 style={{ color: "red" }}>Please, Login </h5>
-          <h5 style={{ color: "blue" }}>This is Login Component</h5>
+          </h2>
+          <h3 style={{ color: "red" }}>Please, Login </h3>
+          <h3 style={{ color: "blue" }}>This is Login Component</h3>
         </div>
       );
     };
@@ -65,15 +65,15 @@ const Week6 = () => {
       return (
         // className="body-component"
         <div>
-          <h4
+          <h2
             style={{
-              color: "peru",
+              color: "black",
             }}
           >
             Displaying IF- ElSE Condition component
-          </h4>
-          <h5 style={{ color: "tomato" }}>Welcome back </h5>
-          <h5 style={{ color: "teal" }}>This is Welcome Component</h5>
+          </h2>
+          <h3 style={{ color: "tomato" }}>Welcome back </h3>
+          <h3 style={{ color: "teal" }}>This is Welcome Component</h3>
         </div>
       );
     };
@@ -94,9 +94,9 @@ const Week6 = () => {
       };
       return (
         <div>
-          <h4 style={{ color: "palevioletred" }}>
+          <h3 style={{ color: "palevioletred" }}>
             This is Default Dashboard component
-          </h4>
+          </h3>
           <button onClick={handleUser}>Switch to User</button>{" "}
           <button onClick={handleAdmin}>Switch to Admin</button>
         </div>
@@ -112,7 +112,7 @@ const Week6 = () => {
 
       return (
         <div>
-          <h4 style={{ color: "palevioletred" }}>This is Admin Component</h4>
+          <h3 style={{ color: "palevioletred" }}>This is Admin Component</h3>
           <button onClick={handleUser}>Switch to User</button>{" "}
           <button onClick={handleDefault}>Switch to Default</button>
         </div>
@@ -127,7 +127,7 @@ const Week6 = () => {
       };
       return (
         <div>
-          <h4 style={{ color: "palevioletred" }}>This is User Component</h4>
+          <h3 style={{ color: "palevioletred" }}>This is User Component</h3>
           <button onClick={handleDefault}>Switch to Default</button>{" "}
           <button onClick={handleAdmin}>Switch to Admin</button>
         </div>
@@ -161,28 +161,28 @@ const Week6 = () => {
       },
     ];
     return (
-      // className="body-component "
+      // className="body-component"
       <div>
-        <h4 style={{ color: "peru" }}>
+        <h2 style={{ color: "black" }}>
           Renderings 2 Student Details ( Name,RollNo, Group, Subjects) using
           map() method.
-        </h4>
+        </h2>
         <div className="box">
           {students.map((Student, index) => (
             <div className="center body-card">
               <div>
-                <h5 style={{ textDecorationLine: "underline" }}>
+                <h3 style={{ textDecorationLine: "underline" }}>
                   {Student.student}
-                </h5>
-                <h5>{Student.name}</h5>
-                <h5>{Student.rno}</h5>
-                <h5>{Student.group}</h5>
+                </h3>
+                <h3>{Student.name}</h3>
+                <h3>{Student.rno}</h3>
+                <h3>{Student.group}</h3>
               </div>
-              <h5 style={{ textDecorationLine: "underline" }}>Subjects</h5>
+              <h3 style={{ textDecorationLine: "underline" }}>Subjects</h3>
               <div>
                 {Student.subjects.map((studentDetails, index) => (
                   <div key={index}>
-                    <h5>{studentDetails}</h5>
+                    <h3>{studentDetails}</h3>
                   </div>
                 ))}
               </div>
@@ -194,21 +194,23 @@ const Week6 = () => {
     );
   };
   return (
+    // className="body-component"
+    // className="body-component"
     // className="component width"
-    // className="body-component"
-    // className="body-component"
     <div>
       <TernaryOperatorComponent />
       <hr />
       <div>
-        <h4 style={{ color: "peru" }}>Displaying Logical operator component</h4>
+        <h2 style={{ color: "black" }}>
+          Displaying Logical operator component
+        </h2>
         <LogicalOperatorComponent />
       </div>
       <hr />
       {ifElseOperatorComponent(isLoggedIn)}
       <hr />
       <div>
-        <h4 style={{ color: "peru" }}>Displaying Switch Case Component</h4>
+        <h2 style={{ color: "black" }}>Displaying Switch Case Component</h2>
         {SwitchComponent()}
       </div>
       <hr />

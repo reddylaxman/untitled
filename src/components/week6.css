@@ -39,3 +39,7 @@ button {
   flex-direction: row;
   border: 1px solid;
 }
+h2,
+h3 {
+  font-size: 20px;
+}
