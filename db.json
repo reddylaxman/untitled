@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "username": "",
+      "password": "",
+      "fullname": "",
+      "email": "",
+      "address": "",
+      "gender": "",
+      "pno": "",
+      "id": "94c3"
+    },
+    {
+      "id": "3794",
+      "username": "reddylaxman",
+      "password": "asdfghjkl",
+      "fullname": "Laxman Reddy",
+      "email": "reddylaxman64@gmail.com",
+      "address": "Hyderabad",
+      "gender": "male",
+      "pno": "8886603906"
+    }
+  ]
+}

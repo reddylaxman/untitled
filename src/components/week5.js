@@ -32,7 +32,7 @@ function StudentCard() {
           https://reddylaxman.github.io/untested/students.json
         </a>
       </h4>
-      {students.slice(0, 5).map((studentCard, index) => (
+      {students.slice(0, 6).map((studentCard, index) => (
         <Card
           className="card"
           style={{

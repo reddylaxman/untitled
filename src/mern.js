@@ -6,12 +6,9 @@ import Week3 from "./components/Week3";
 import Week4 from "./components/week4";
 import Week5 from "./components/week5";
 import Week6 from "./components/week6";
-import Week7 from "./components/Week7";
 import FilteredCards from "./components/CardFilter";
 import "./mern.css";
-
 import Navbar from "react-bootstrap/Navbar";
-
 function ReactRouting() {
   return (
     <div className="container">
@@ -41,9 +38,7 @@ function ReactRouting() {
             <button className="button-style">
               <Link to="Week6">Week6</Link>
             </button>
-            <button className="button-style">
-              <Link to="Week7">Week7</Link>
-            </button>
+
             <button className="button-style">
               <Link to="FilteredCards">Filtered Cards</Link>
             </button>
@@ -57,7 +52,7 @@ function ReactRouting() {
           <Route path="/Week4" element={<Week4 />}></Route>
           <Route path="/Week5" element={<Week5 />}></Route>
           <Route path="/Week6" element={<Week6 />}></Route>
-          <Route path="/Week7" element={<Week7 />}></Route>
+
           <Route path="/FilteredCards" element={<FilteredCards />}></Route>
         </Routes>
       </BrowserRouter>

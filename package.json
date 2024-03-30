@@ -8,11 +8,18 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.1",
+    "react-bootstrap": "^2.10.2",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
+    "react-easy-crop": "^5.0.6",
+    "react-hamburger-menus": "^1.0.16",
+    "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
+    "react-top-loading-bar": "^2.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -21,7 +28,8 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "json-server --watch ./db.json --port 3133"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^3.4.1"
   }
 }
