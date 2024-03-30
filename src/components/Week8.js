@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./LoginPage";
 import Signup from "./SignupPage";
 const Week8 = () => {
   return (
-    <BrowserRouter>
+    <Router basename="untitled">
       <Routes>
         <Route path="/untitled" element={<Login />} />
         <Route path="/LoginPage" element={<Login />} />
         <Route path="/SignupPage" element={<Signup />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 export default Week8;
