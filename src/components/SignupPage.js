@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SignupPage.css";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 function Signup() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -24,22 +23,34 @@ function Signup() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        throw new Error("Network response was not ok.");
-      })
+      // .then((res) => {
+      //   if (res.ok) {
+      //     return res.json();
+      //   }
+      //   throw new Error("Network response was not ok.");
+      // })
       .then((data) => {
         console.log(formData);
-        toast.success("Signup successful!");
-        setTimeout(() => {
-          navigate("/LoginPage");
-        }, 1000);
+        Swal.fire({
+          icon: "success",
+          title: "Signup Successfully",
+          showConfirmButton: true,
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          confirmButtonText: "OK",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            navigate("/");
+          }
+        });
       })
       .catch((error) => {
         console.error("Error:", error);
-        toast.error("Signup failed. Please try again.");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Signup failed. Please try again.",
+        });
       });
   }
 
@@ -161,13 +172,12 @@ function Signup() {
           </button>{" "}
           {"                          "}
           <button className="btn ">
-            <Link to="/LoginPage" className="btn  nav-link">
+            <Link to="/" className="btn  nav-link">
               Login
             </Link>
           </button>
         </div>
       </form>
-      <ToastContainer className="toast-container" />
     </div>
   );
 }

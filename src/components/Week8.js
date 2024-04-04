@@ -8,7 +8,6 @@ const Week8 = () => {
     <Router basename="untitled">
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/LoginPage" element={<Login />} />
         <Route path="/SignupPage" element={<Signup />} />
       </Routes>
     </Router>

@@ -37,9 +37,12 @@ button {
 .box {
   display: flex;
   flex-direction: row;
-  border: 1px solid;
+  margin: auto;
+  width: 80%;
 }
-h2,
-h3 {
-  font-size: 20px;
+.cardStyle {
+  width: 25%;
+  background-color: skyblue;
+  margin: auto;
+  border-radius: 10px;
 }

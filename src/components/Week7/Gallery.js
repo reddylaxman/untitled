@@ -1,11 +1,10 @@
 import React from "react";
 
-function GalleryComponent() {
+function Gallery() {
   return (
-    <div style={{ margin: "auto", textAlign: "center" }}>
-      <h4>Compressor</h4>
-      <h5>This is where you can Compress your image</h5>
+    <div>
+      <h3>This is Gallery Page</h3>
     </div>
   );
 }
-export default GalleryComponent;
+export default Gallery;

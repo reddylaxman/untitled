@@ -11,6 +11,7 @@
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
+    "react-bootstrap-sweetalert": "^5.2.0",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-easy-crop": "^5.0.6",
@@ -20,6 +21,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
     "react-top-loading-bar": "^2.3.1",
+    "sweetalert2": "^11.10.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

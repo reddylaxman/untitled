@@ -1,22 +1,20 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LoginPage.css";
+import Swal from "sweetalert2";
 
 function Login() {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
+  const [showAlert, setShowAlert] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("https://my-json-server-nx6t.onrender.com/users", {
-      method: "GET",
-    })
+    fetch("https://my-json-server-nx6t.onrender.com/users")
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -24,24 +22,32 @@ function Login() {
         throw new Error("Network response was not ok.");
       })
       .then((users) => {
-        console.log(formData);
         const user = users.find(
           (user) =>
             user.username === formData.username &&
             user.password === formData.password
         );
         if (user) {
-          setTimeout(() => {
-            toast.success("Login successful!");
-          }, 1000);
+          console.log(formData);
+          Swal.fire({
+            icon: "success",
+            title: "Login Successful!",
+          });
         } else {
-          toast.error("Invalid username or password");
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Invalid username or password!",
+          });
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-
-        toast.error("An error occurred while processing your request");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
       });
   }
 
@@ -92,7 +98,6 @@ function Login() {
           </Link>
         </button>
       </form>
-      <ToastContainer />
     </div>
   );
 }

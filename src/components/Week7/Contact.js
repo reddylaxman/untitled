@@ -1,10 +1,9 @@
 import React from "react";
-function ContactComponent() {
+function Contact() {
   return (
-    <div style={{ margin: "auto", textAlign: "center" }}>
-      <h4>Enhancer</h4>
-      <h5>This is where you can enhance your image</h5>
+    <div>
+      <h3>Contact Page</h3>
     </div>
   );
 }
-export default ContactComponent;
+export default Contact;
