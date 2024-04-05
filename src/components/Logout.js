@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const Logout = () => {
   const navigate = useNavigate();
 
@@ -40,9 +40,23 @@ const Logout = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "grid",
+        placeContent: "center",
+        backgroundColor: "white",
+        maxWidth: "50%",
+        maxHeight: "50%",
+        borderRadius: "20px",
+        height: "15rem",
+        marginTop: "20%",
+        marginLeft: "25%",
+      }}
+    >
       <h4>Logout Page</h4>
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={handleLogout} className="btn btn-danger">
+        Logout
+      </button>
     </div>
   );
 };
