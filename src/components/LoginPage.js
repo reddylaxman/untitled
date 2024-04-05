@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LoginPage.css";
 import Swal from "sweetalert2";
 
 function Login() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
-  const [showAlert, setShowAlert] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -29,9 +29,19 @@ function Login() {
         );
         if (user) {
           console.log(formData);
+          sessionStorage.setItem("username", user.username);
+          sessionStorage.setItem("isLoggedin", true);
           Swal.fire({
             icon: "success",
             title: "Login Successful!",
+            showConfirmButton: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            confirmButtonText: "OK",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate("/Logout");
+            }
           });
         } else {
           Swal.fire({

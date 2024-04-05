@@ -1,12 +1,7 @@
 import React from "react";
-import Week8 from "./components/Week8";
-import NavbarComponent from "./components/Week7/MyNavbar";
+import Week9 from "./components/Week9";
 
 const App = () => {
-  return (
-    <Week8>
-      <NavbarComponent />
-    </Week8>
-  );
+  return <Week9 />;
 };
 export default App;
