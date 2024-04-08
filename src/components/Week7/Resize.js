@@ -1,10 +1,10 @@
 import React from "react";
 
-function Home() {
+function Resize() {
   return (
     <div>
-      <h3>Home Page</h3>
+      <h3>Resize </h3>
     </div>
   );
 }
-export default Home;
+export default Resize;

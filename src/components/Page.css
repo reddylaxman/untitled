@@ -1,21 +1,12 @@
 .container {
   display: grid;
   place-items: center;
-  min-height: 60%;
+  width: 50%;
   background-color: white;
   border-radius: 50px;
-  max-width: 70%;
-  min-width: 50%;
   padding-bottom: 20px;
-  margin-top: 200px;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
 form {
   margin: auto;
 }

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
-import AboutComponent from "./About";
-import ContactComponent from "./Contact";
-import GalleryComponent from "./Gallery";
-import HomeComponent from "./Home";
+
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ResponsiveNavbar } from "react-hamburger-menus";
 import "react-hamburger-menus/dist/style.css";
+import Crop from "./Crop";
+import Resize from "./Resize";
+import Compressor from "./Compressor";
+import Enhancer from "./Enhancer";
 const NavbarComponent = () => {
   return (
     <div>

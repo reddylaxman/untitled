@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./SignupPage.css";
+import "./Page.css";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 function Signup() {
@@ -18,11 +18,14 @@ function Signup() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("https://my-json-server-nx6t.onrender.com/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      "https://musical-succotash-v6644964xgr62wgrv-3133.app.github.dev/users",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    )
       // .then((res) => {
       //   if (res.ok) {
       //     return res.json();
@@ -60,7 +63,7 @@ function Signup() {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{ marginTop: "100px" }}>
       <h1>Signup</h1>
 
       <form onSubmit={handleSubmit}>
