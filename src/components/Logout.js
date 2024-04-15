@@ -11,7 +11,7 @@ import Resize from "./Week7/Resize";
 import Compressor from "./Week7/Compressor";
 import Enhancer from "./Week7/Enhancer";
 import "./Logout.css";
-import profile from "./images/profile2.jpg";
+import profile from "./images/user.png";
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Logout = () => {
         confirmButtonText: "OK",
       }).then((result) => {
         if (result.isConfirmed) {
-          // Navigate to login page upon OK button click
+          window.location.reload();
           navigate("/");
         }
       });
@@ -92,37 +92,38 @@ const Logout = () => {
                 Enhancer
               </Nav.Link>
             </li>
-          </ul>
-          <div style={{ position: "relative" }}>
-            <img src={profile} alt="Profile" className="imgStyle" />
-            <select
-              onChange={handleLogout}
-              style={{
-                width: "200px",
-                height: "40px",
-                marginRight: "10px",
-                background: "darkslategrey",
-                color: "wheat",
-                fontSize: "20px",
-                border: "none",
-              }}
-            >
-              <option value="" disabled selected hidden>
-                {username}
-              </option>
-              <option
-                value="logout"
+            <div style={{ position: "relative" }}>
+              <img src={profile} alt="Profile" className="imgStyle" />
+              <select
+                onChange={handleLogout}
                 style={{
+                  width: "200px",
+                  height: "40px",
+                  marginRight: "10px",
                   background: "darkslategrey",
                   color: "wheat",
-                  fontSize: "16px",
-                  cursor: "pointer",
+                  fontSize: "20px",
+                  border: "none",
+                  marginTop: "3px",
                 }}
               >
-                Logout
-              </option>
-            </select>
-          </div>
+                <option value="" disabled selected hidden>
+                  {username}
+                </option>
+                <option
+                  value="logout"
+                  style={{
+                    background: "darkslategrey",
+                    color: "wheat",
+                    fontSize: "16px",
+                    cursor: "pointer",
+                  }}
+                >
+                  Logout
+                </option>
+              </select>
+            </div>
+          </ul>
         </ResponsiveNavbar>
       </div>
       <Outlet />

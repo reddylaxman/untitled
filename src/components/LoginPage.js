@@ -104,7 +104,7 @@ function Login() {
         </button>
         {"         "}
         <button className="btn ">
-          <Link to="/SignupPage" className="btn  nav-link">
+          <Link to="/Signup" className="btn  nav-link">
             Signup
           </Link>
         </button>

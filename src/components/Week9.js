@@ -16,7 +16,7 @@ const Week9 = () => {
       <Link to="/Logout" />
       <Routes>
         <Route path="/" element={loggedin ? <Logout /> : <Login />} />
-        <Route path="/SignupPage" element={<Signup />} />
+        <Route path="/Signup" element={<Signup />} />
         <Route path="/Logout" element={<Logout />}>
           <Route path="Crop" element={<Crop />} />
           <Route path="Resize" element={<Resize />} />

@@ -65,7 +65,6 @@ function Signup() {
   return (
     <div className="container" style={{ marginTop: "100px" }}>
       <h1>Signup</h1>
-
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="form-group col-md-6">
