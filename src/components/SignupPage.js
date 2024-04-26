@@ -26,12 +26,12 @@ function Signup() {
         body: JSON.stringify(formData),
       }
     )
-      // .then((res) => {
-      //   if (res.ok) {
-      //     return res.json();
-      //   }
-      //   throw new Error("Network response was not ok.");
-      // })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error("Network response was not ok.");
+      })
       .then((data) => {
         console.log(formData);
         Swal.fire({
@@ -63,7 +63,7 @@ function Signup() {
   }
 
   return (
-    <div className="container" style={{ marginTop: "100px" }}>
+    <div className="page-container" style={{ marginTop: "100px" }}>
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
         <div className="row">

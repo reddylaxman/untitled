@@ -6,12 +6,8 @@ import Nav from "react-bootstrap/Nav";
 import { Link, Outlet } from "react-router-dom";
 import { ResponsiveNavbar } from "react-hamburger-menus";
 import "react-hamburger-menus/dist/style.css";
-import Crop from "./Week7/Crop";
-import Resize from "./Week7/Resize";
-import Compressor from "./Week7/Compressor";
-import Enhancer from "./Week7/Enhancer";
 import "./Logout.css";
-import profile from "./images/user.png";
+import profile from "./images/profile2.jpg";
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -36,7 +32,7 @@ const Logout = () => {
         confirmButtonText: "OK",
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.reload();
+          window.location.reload(true);
           navigate("/");
         }
       });
@@ -87,11 +83,7 @@ const Logout = () => {
                 Compressor
               </Nav.Link>
             </li>
-            <li>
-              <Nav.Link as={Link} to="/Logout/Enhancer">
-                Enhancer
-              </Nav.Link>
-            </li>
+
             <div style={{ position: "relative" }}>
               <img src={profile} alt="Profile" className="imgStyle" />
               <select

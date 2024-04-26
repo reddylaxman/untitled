@@ -4,7 +4,8 @@
   color: wheat;
 }
 .imgStyle {
-  width: 42px;
+  width: 40px;
+  border-radius: 50%;
 }
 li {
   height: 30px;

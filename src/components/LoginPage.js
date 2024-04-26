@@ -69,7 +69,7 @@ function Login() {
   }
 
   return (
-    <div className="container" style={{ marginTop: "200px" }}>
+    <div className="page-container" style={{ marginTop: "200px" }}>
       <h1>Login</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="form-row">
