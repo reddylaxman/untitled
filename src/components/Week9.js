@@ -7,7 +7,7 @@ import Crop from "./Week7/Crop";
 import Resize from "./Week7/Resize";
 import Compressor from "./Week7/Compressor";
 import Enhancer from "./Week7/Enhancer";
-
+import PageNotFound from "./PageNotFound";
 const Week9 = () => {
   const loggedin = sessionStorage.getItem("isLoggedin");
   console.log(loggedin, "login");
@@ -22,6 +22,7 @@ const Week9 = () => {
           <Route path="Resize" element={<Resize />} />
           <Route path="Compressor" element={<Compressor />} />
           <Route path="Enhancer" element={<Enhancer />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </Router>
